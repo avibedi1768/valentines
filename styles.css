@@ -1,0 +1,33 @@
+:root{
+  --bg1:#ffdde1;
+  --bg2:#ffb3c6;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;
+}
+.card{
+  width:92%;max-width:520px;background:rgba(255,255,255,0.9);
+  padding:36px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.12);
+  text-align:center;position:relative;overflow:visible;
+}
+h1{margin:0 0 18px;font-size:26px;color:#333}
+.buttons{position:relative;height:150px;margin-top:6px}
+.btn{
+  position:absolute;padding:12px 22px;font-size:18px;border-radius:10px;border:none;
+  color:#fff;cursor:pointer;user-select:none;transition:transform 300ms cubic-bezier(.2,.8,.2,1),box-shadow 200ms;
+  box-shadow:0 6px 14px rgba(0,0,0,0.12);
+}
+#yes{left:22%;top:28px;background:#ff4d6d}
+#no{right:22%;top:28px;background:#2fbf71}
+.message{margin-top:14px;font-weight:600;color:#222;min-height:1.2em}
+
+/* mobile adjustments */
+@media (max-width:600px){
+  .buttons{height:200px}
+  #yes{left:50%;transform:translateX(-50%);top:24px}
+  #no{left:50%;transform:translateX(-50%);top:110px}
+}
